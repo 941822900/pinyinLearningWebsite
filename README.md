@@ -6,4 +6,4 @@ A pinyin learning website for foreigners
 
 2.I used Mysql for my project, databasefile.rar is its databaseFile.Please add it to your own Mysql, and modify the index.js call the database part of the code
 
-# More introduction in 说明.docx
+## More introduction in 说明.docx
