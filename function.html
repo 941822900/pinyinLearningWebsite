@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+<script src="/image/kiana-master/src/js/kiana.js"></script>
+<style>
+    #menu>ul{
+        list-style-type: none;
+        position: fixed;
+        margin: 0;
+        padding: 0;
+        left:0;
+        top:0;
+        width: 100%;
+        overflow: hidden;
+        background:url(/image/color.png) left top repeat;
+    }
+    #menu>ul>li{
+        float: left;
+        border-right:1px solid white;
+    }
+    #menu>ul>li:last-child {
+        border-right: none;
+    }
+    #menu>ul>li a {
+        display: block;
+        color: white;
+        text-align: center;
+        padding: 12px 14px;
+        text-decoration: none;
+    }
+    #menu>ul>li a:hover:not(.active) {
+        background-color: #4CAF50;
+    }
+    
+    label{
+        margin: 0px;
+        padding: 0px;
+    }
+    .label{
+        width: 70%;
+        height: 595px;
+        margin: 55px auto;
+        text-align: center;
+    }
+    .label>ul{
+        width: 100%;
+        height: 50px;
+    }
+    .label>ul>li{
+        list-style: none;
+        float: left;
+        width: 30%;
+        height: 50px;
+        background-color: gray;
+        line-height: 50px;
+        color: white;
+        border-right:1px solid white;
+    }
+    .label>div{
+        width: 100%;
+        height: 100%;
+        position: relative;
+        color: white;
+        line-height: 70px;
+        background-color: #222222;
+        display: none;
+    }
+    .label li:hover
+    {
+        background-color: #4CAF50;
+        border-color: silver;
+        cursor: pointer;
+    }
+    .label li.showed{
+        background-color: #222222;
+        border-top: 5px solid orange;
+        line-height: 40px;
+        box-shadow: 5px 5px 20px #333333;
+    }
+    .label div.showed{
+        display: block;
+        box-shadow: 5px 5px 20px #333333;
+    }
+    
+    button {
+        padding: .3em .85em;
+        border: 1px solid rgba(0,0,0,.1);
+        box-shadow: 0 .05em .25em rgba(0,0,0,.5);
+        text-shadow: 0 -.05em .05em rgba(0,0,0,.5);
+        line-height: 1.5;
+        display: inline-block;
+        color: #FFF;
+        background: #8ac007 linear-gradient(hsla(0,0%,100%,.2),transparent);
+        font-weight: 700;
+        font-size: 12px;
+        text-align: center;
+        padding-left: 10px;
+        padding-right: 10px;
+        padding-top: 3px;
+        padding-bottom: 4px;
+        text-decoration: none;
+        margin-left: 5px;
+        margin-top: 0;
+        margin-bottom: 5px;
+        border: 1px solid #aaa;
+        border-radius: 5px;
+        white-space: nowrap;
+    }
+    </style>
+    <script>
+        </script>
+</head>
+
+<body>
+<div id="menu">
+    <ul>
+        <li><a href="/">home</a></li>
+        <li><a href="function">function</a></li>
+        <li><a href="contact">contact</a></li>
+        <li><a href="about">about</a></li>
+    </ul>
+</div>
+
+<div class="label">
+    <ul>
+        <li class="showed" onclick=cli($(this))>Video teaching</li>
+        <li onclick="cli($(this));">Game teaching one</li>
+        <li onclick="cli($(this))">Game teaching two</li>
+    </ul>
+    <div class="showed">
+            <iframe src="//player.bilibili.com/player.html?aid=13045850&cid=21417453&page=1" 
+            scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"
+            width="100%" height="100%"> </iframe>
+    </div>
+    <div>
+        <object id="pet" type="application/x-shockwave-flash" style="outline:none;" 
+        data="/image/c302b7d816453b2f6dceeffaf82bdd34.swf" width="100%" height="100%">
+            <param name="movie" value="/image/hamster.swf"></param>
+            <param name="AllowScriptAccess" value="never
+            "></param>
+            <param name="wmode" value="opaque"></param>
+            </object>
+    </div>
+    <div>
+        <iframe src="http://www.7k7k.com/swf/155098.htm" 
+        scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"
+        width="100%" height="100%"> </iframe>
+    </div>
+
+</div>
+<div id="div1"></div>
+<script>
+    function cli(self)
+    {
+        $(self).nextAll("li").removeClass("showed");
+        $(self).prevAll("li").removeClass("showed");
+        $(self).addClass("showed");
+        $(".label div").hide();
+        $(".label div").eq($(self).index()).show();
+    }
+   $("#div1").KianaInit({
+      randomPosition:true
+    });
+</script>
+
+</body>
+</html>

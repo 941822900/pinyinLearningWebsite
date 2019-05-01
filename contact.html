@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+<script src="/image/kiana-master/src/js/kiana.js"></script>
+<style>
+    #menu>ul{
+        list-style-type: none;
+        position: fixed;
+        margin: 0;
+        padding: 0;
+        left:0;
+        top:0;
+        width: 100%;
+        overflow: hidden;
+        background:url(/image/color.png) left top repeat;
+    }
+    #menu>ul>li{
+        float: left;
+        border-right:1px solid white;
+    }
+    #menu>ul>li:last-child {
+        border-right: none;
+    }
+    #menu>ul>li a {
+        display: block;
+        color: white;
+        text-align: center;
+        padding: 12px 14px;
+        text-decoration: none;
+    }
+    #menu>ul>li a:hover:not(.active) {
+        background-color: #4CAF50;
+    }
+
+    #link{
+        color: #617f10;
+        margin-top: 0;
+        text-align:left;
+        background:url(/image/lalala.bmp) left top repeat;
+        padding:8px 15px;
+        font-size:16px;
+        border:1px solid #D0D0D0;
+        border-radius:5px;
+        font-family:Arial,Helvetica,sans-serif;
+    }
+    
+    button {
+        padding: .3em .85em;
+        border: 1px solid rgba(0,0,0,.1);
+        box-shadow: 0 .05em .25em rgba(0,0,0,.5);
+        text-shadow: 0 -.05em .05em rgba(0,0,0,.5);
+        line-height: 1.5;
+        display: inline-block;
+        color: #FFF;
+        background: #8ac007 linear-gradient(hsla(0,0%,100%,.2),transparent);
+        font-weight: 700;
+        font-size: 12px;
+        text-align: center;
+        padding-left: 10px;
+        padding-right: 10px;
+        padding-top: 3px;
+        padding-bottom: 4px;
+        text-decoration: none;
+        margin-left: 5px;
+        margin-top: 0;
+        margin-bottom: 5px;
+        border: 1px solid #aaa;
+        border-radius: 5px;
+        white-space: nowrap;
+    }
+    </style>
+    <script>
+        </script>
+</head>
+
+<body>
+<div id="menu">
+    <ul>
+        <li><a href="/">home</a></li>
+        <li><a href="function">function</a></li>
+        <li><a href="contact">contact</a></li>
+        <li><a href="about">about</a></li>
+    </ul>
+</div>
+</br></br>
+
+<div id="link">
+</br>
+<h2>You can visit these friends' websites to learn more about pinyin :</h2>
+<h3>Peter: <a href="http://www.peter-sia.top:8080/">http://www.peter-sia.top:8080/</a></h3>
+<h3>More friends' contact are being added.  </h3>
+</div>
+
+<div id="div1"></div>
+
+<script>
+   $("#div1").KianaInit({
+      randomPosition:true
+    });
+</script>
+
+</body>
+</html>
